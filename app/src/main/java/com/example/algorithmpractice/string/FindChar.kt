@@ -27,7 +27,7 @@ c
 
 // 빼먹은 점
 // 문자열 말고 문자도 소문자나 대문자로 통일해주기
-fun solution(str: String, c: Char): Int {
+private fun solutionCode(str: String, c: Char): Int {
     var answer = 0
     str.lowercase().forEach { if (it == c.lowercaseChar()) answer++ }
     return answer
@@ -37,5 +37,5 @@ fun main() {
     val sc = Scanner(System.`in`)
     val str = sc.next()
     val c = sc.next()[0]
-    println(solution(str, c))
+    println(solutionCode(str, c))
 }

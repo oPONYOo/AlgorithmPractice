@@ -18,7 +18,7 @@ import java.util.*
 
 // 대문자 아스키코드 65-90
 // 소문자         97-122
-fun solution(str: String): String {
+private fun solutionCode(str: String): String {
     var change = ""
     str.forEach {
         change = if (it.isLowerCase()) change.plus(it.uppercase()) else change.plus(it.lowercase())
@@ -31,5 +31,5 @@ fun solution(str: String): String {
 fun main() {
     val sc = Scanner(System.`in`)
     val str = sc.next()
-    println(solution(str))
+    println(solutionCode(str))
 }
