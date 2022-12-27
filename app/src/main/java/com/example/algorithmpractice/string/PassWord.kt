@@ -1,7 +1,6 @@
 package com.example.algorithmpractice.string
 
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 /**12. 암호
