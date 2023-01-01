@@ -1,7 +1,6 @@
 package com.example.algorithmpractice.array
 
 import java.util.*
-import kotlin.collections.ArrayList
 
 /**7. 점수계산
 @since 2023.1.1.Sun
