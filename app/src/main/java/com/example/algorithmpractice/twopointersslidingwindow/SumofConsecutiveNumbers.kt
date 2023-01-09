@@ -28,6 +28,7 @@ N입력으로 양의 정수 N이 입력되면 2개 이상의 연속된 자연수
  */
 /*
 [풀기 전]
+방법 1.
 포인터 2개 lt, rt
 연속된 자연수로 n을 만들기 위해 1부터 n/2+1까지의 배열 arr을 만든다.
 0부터 n/2+1까지 for문 실행
@@ -35,8 +36,19 @@ sum에 배열의 lt부터 rt까지의 합을 더한다
 sum이 15인 경우 answer++
 sum이 15랑 같거나 클경우 작아질때까지 배열의 lt값 빼주고 lt++
 뺄때마다 sum이 15인 경우 answer++
-[풀고 난 후]
 
+[풀고 난 후]
+방법 2.
+1부터 14까지 for문 실행
+sum에 연속되는 수의 합 할당
+k에 n-sum 할당
+k가 0보다 작을 경우 반복문 중단
+연속되는 숫자 2개 이상이므로 i가 1보다 크고,
+k의 나머지가 0인경우 answer++
+
+방법 3.
+방법 2와 동일
+while문 활용
 */
 
 private fun solutionCode(n: Int): Int {
@@ -46,17 +58,36 @@ private fun solutionCode(n: Int): Int {
     val m = n / 2 + 1
     val arr = Array(m) { 0 }
 
+
     for (i in 0 until m) arr[i] = i + 1
 
-    for (rt in 0 until m) {
-        sum += arr[rt]
-        if (sum == n) answer++
-        while (sum >= n) {
-            sum -= arr[lt++]
-            if (sum == n) answer++
-        }
+    // 방법 1.
+    /* for (rt in 0 until m) {
+         sum += arr[rt]
+         if (sum == n) answer++
+         while (sum >= n) {
+             sum -= arr[lt++]
+             if (sum == n) answer++
+         }
 
+     }*/
+
+    // 방법 2.
+    for (i in 1 until n) {
+        sum += i
+        val k = n - sum
+        if (k < 0) break
+        else if (i > 1 && k % i == 0) answer++
     }
+
+    // 방법 3.
+    /*var cnt = 1
+    var k = n - 1
+    while (k > 0) {
+        cnt++
+        k -= cnt
+        if (k % cnt == 0) answer++
+    }*/
 
 
 
