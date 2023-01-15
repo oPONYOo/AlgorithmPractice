@@ -56,12 +56,9 @@ private fun solutionCode(n: Int, k: Int, arr: Array<Int>): ArrayList<Int> {
     for (i in 0 until k-1) {
         map[arr[i]] = if (map[arr[i]] == null) 1 else map[arr[i]]!! + 1
     }
-    println(map)
     for ((lt, rt) in (k-1 until n).withIndex()) {
         map[arr[rt]] = if (map[arr[rt]] == null) 1 else map[arr[rt]]!! + 1
         answer.add(map.size)
-        println(map)
-        println(arr[lt])
         map[arr[lt]] = map[arr[lt]]!! - 1
         if (map[arr[lt]] == 0) map.remove(arr[lt])
     }
