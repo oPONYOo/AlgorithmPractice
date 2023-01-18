@@ -31,6 +31,8 @@ answer에 list에 남은 문자열을 뒤집어서 더해준다.
 [풀고 난 후]
 코틀린에서 while문의 body없이 사용가능
 while(조건) {}
+
+
 */
 
 private fun solutionCode(s: String): String {
