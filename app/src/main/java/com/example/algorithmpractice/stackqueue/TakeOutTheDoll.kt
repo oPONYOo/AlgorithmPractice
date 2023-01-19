@@ -59,6 +59,7 @@ m-1만큼 for문 실행 바구니 moves 요소 순서로 인형 담기
 이때 바구니 pop 값이랑 push할 값 같으면 pop하고 answer++
 인형있던 자리는 0으로 set
 break
+
 [풀고 난 후]
 
 
