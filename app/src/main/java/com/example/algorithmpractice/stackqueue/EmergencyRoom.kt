@@ -78,8 +78,8 @@ private fun solutionCode(n: Int, m: Int, arr: Array<Int>): Int {
             }
         }
         if (p != null) {
+            answer++
             if (p.id == m) return answer
-            else answer++
         }
 
     }
