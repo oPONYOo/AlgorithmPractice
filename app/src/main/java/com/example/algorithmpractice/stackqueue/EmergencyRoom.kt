@@ -57,6 +57,7 @@ answer: 진료
 
 [풀고 난 후]
 for문에서만 break가능
+data클래스 활용하기
 */
 
 data class Person(
