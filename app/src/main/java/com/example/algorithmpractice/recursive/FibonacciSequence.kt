@@ -38,7 +38,7 @@ import java.util.*
 for문이 재귀보다 성능이 좋다.
 스택프레임이 너무 많이 쌓이기 때문
 */
-var fibo = IntArray(0)
+private var fibo = IntArray(0)
 
 private fun DFS(n: Int): Int {
     // 방법 1.
