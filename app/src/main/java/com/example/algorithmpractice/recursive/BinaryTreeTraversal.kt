@@ -1,6 +1,5 @@
 package com.example.algorithmpractice.recursive
 
-import java.util.*
 
 /**5. 이진트리 순회(DFS: Depth-First Search 깊이우선탐색)
 @since 2023.2.8.Wed
@@ -61,9 +60,12 @@ var root: Node = Node(0)
 private fun DFS(root: Node?) {
     if (root == null) return
     else {
-        print("${root.data} " )
+        //print("${root.data} " ) //전위
         DFS(root.lt) //왼쪽
+        //print("${root.data} " ) //중위
         DFS(root.rt) //오른쪽
+        print("${root.data} " ) //후
+
     }
 
 }
@@ -77,7 +79,4 @@ fun main() {
     root.rt!!.lt = Node(6)
     root.rt!!.rt = Node(7)
     DFS(root) // 100번지 root노드
-
-
-
 }
