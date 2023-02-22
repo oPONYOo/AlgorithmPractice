@@ -40,7 +40,7 @@ package com.example.algorithmpractice.recursive
 
 
 
-var n: Int = 0
+private var n: Int = 0
 private var ch = IntArray(0)
 private fun DFS(L: Int) {
     if (L == n + 1) {
